@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Pac-Man | Modern Arcade</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts for arcade feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Main Menu Screen -->
+        <div id="main-menu" class="screen active">
+            <h1 class="glitch-text" data-text="PAC-MAN">PAC-MAN</h1>
+            <div class="menu-buttons">
+                <button id="start-btn" class="arcade-btn">START GAME</button>
+                <button id="instructions-btn" class="arcade-btn secondary">HOW TO PLAY</button>
+            </div>
+            <div class="menu-footer">
+                <button id="audio-toggle" class="icon-btn">
+                    <span id="audio-icon">🔊</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Instructions Screen -->
+        <div id="instructions-screen" class="screen">
+            <h2>CONTROLS</h2>
+            <div class="instructions-content">
+                <div class="control-item">
+                    <span class="key">▲</span>
+                    <span class="key">▼</span>
+                    <span class="key">◀</span>
+                    <span class="key">▶</span>
+                    <p>Arrow Keys or WASD to move</p>
+                </div>
+                <div class="goal-item">
+                    <div class="entity-preview pacman-preview"></div>
+                    <p>Eat all pellets to win</p>
+                </div>
+                <div class="goal-item">
+                    <div class="entity-preview ghost-preview"></div>
+                    <p>Avoid the ghosts!</p>
+                </div>
+            </div>
+            <button id="back-to-menu-btn" class="arcade-btn">BACK</button>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="screen">
+            <div id="hud">
+                <div class="hud-item">
+                    <span class="label">SCORE</span>
+                    <span id="score-val">0000</span>
+                </div>
+                <div class="hud-item">
+                    <div id="lives-container"></div>
+                </div>
+                <div class="hud-item">
+                    <button id="pause-btn" class="icon-btn">
+                        <span id="pause-icon">⏸</span>
+                    </button>
+                </div>
+            </div>
+            <div id="canvas-wrapper">
+                <canvas id="game-canvas"></canvas>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="game-over-screen" class="screen">
+            <h2 id="game-over-title">GAME OVER</h2>
+            <div class="final-stats">
+                <p>FINAL SCORE</p>
+                <h3 id="final-score-val">0</h3>
+            </div>
+            <div class="menu-buttons">
+                <button id="restart-btn" class="arcade-btn">RETRY</button>
+                <button id="exit-to-menu-btn" class="arcade-btn secondary">MENU</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- UI Audio Elements (Optional, will use Web Audio API mostly) -->
+    <script src="javascript/game.js" type="module"></script>
+</body>
+</html>
