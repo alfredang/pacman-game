@@ -6,8 +6,8 @@
 // --- Configuration & Constants ---
 const CONFIG = {
     TILE_SIZE: 20,
-    GAME_SPEED: 120, // Lower is faster (ms per step)
-    GHOST_SPEED_RATIO: 0.95,
+    GAME_SPEED: 160, // Lower is faster (ms per step)
+    GHOST_SPEED_RATIO: 0.85,
     POWER_DURATION: 8000, // ms
     COLORS: {
         WALL: '#0021ff',
