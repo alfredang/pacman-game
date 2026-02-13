@@ -38,4 +38,22 @@ To run the game locally with full module support:
 2. Run a local server:
    - **Python**: `python3 -m http.server 8000`
    - **VS Code**: Use the Live Server extension.
-3. Open `http://localhost:8000` in your browser.
+## 🐳 Running with Docker
+
+You can run the game using Docker:
+
+### Pull and Run from Docker Hub
+```bash
+docker run -d -p 8080:80 tertiaryinfotech/pacman-game:latest
+```
+Open `http://localhost:8080` to play.
+
+### Build and Run Locally
+1. Build the image:
+   ```bash
+   docker build -t pacman-game .
+   ```
+2. Run the container:
+   ```bash
+   docker run -d -p 8080:80 pacman-game
+   ```
