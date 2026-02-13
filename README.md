@@ -32,12 +32,20 @@ Play the game here: [https://alfredang.github.io/pacman-game/](https://alfredang
 
 ## 🛠️ Local Development
 
-To run the game locally with full module support:
+### Quick Start (No Server Needed)
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/alfredang/pacman-game.git
+   ```
+2. **Open the game**: 
+   Navigate to the folder and double-click `index.html` to play instantly.
 
-1. Clone the repository.
-2. Run a local server:
+### Development Server (Recommended)
+To run the game with full module support:
+1. Run a local server:
    - **Python**: `python3 -m http.server 8000`
    - **VS Code**: Use the Live Server extension.
+2. Open `http://localhost:8000` in your browser.
 ## 🐳 Running with Docker
 
 You can run the game using Docker:
